@@ -1,0 +1,156 @@
+[
+  {
+    "code": "AE",
+    "name": "Aerospace Engineering",
+    "papers": "8 PAPERS · 2019–2026",
+    "letter": "A",
+    "description": "Aerodynamics, Propulsion, Flight Mechanics, Space Dynamics"
+  },
+  {
+    "code": "AG",
+    "name": "Agricultural Engineering",
+    "papers": "7 PAPERS · 2020–2026",
+    "letter": "A",
+    "description": "Farm Machinery, Soil and Water Conservation, Processing Engineering"
+  },
+  {
+    "code": "AR",
+    "name": "Architecture and Planning",
+    "papers": "11 PAPERS · 2021–2026",
+    "letter": "A",
+    "description": "Architecture, Urban Planning, Building Construction & Management"
+  },
+  {
+    "code": "BM",
+    "name": "Biomedical Engineering",
+    "papers": "7 PAPERS · 2020–2026",
+    "letter": "B",
+    "description": "Bioinstrumentation, Biomechanics, Medical Imaging, Biomaterials"
+  },
+  {
+    "code": "BT",
+    "name": "Biotechnology",
+    "papers": "8 PAPERS · 2019–2026",
+    "letter": "B",
+    "description": "Biochemistry, Microbiology, Molecular Biology, Bioprocess Engineering"
+  },
+  {
+    "code": "CE",
+    "name": "Civil Engineering",
+    "papers": "22 PAPERS · 2016–2026",
+    "letter": "C",
+    "description": "Structural, Geotechnical, Water Resources, Transportation, Environmental"
+  },
+  {
+    "code": "CH",
+    "name": "Chemical Engineering",
+    "papers": "7 PAPERS · 2020–2026",
+    "letter": "C",
+    "description": "Process Calculations, Thermodynamics, Fluid Flow, Heat & Mass Transfer"
+  },
+  {
+    "code": "CS-IT",
+    "name": "Computer Science and IT",
+    "papers": "27 PAPERS · 2010–2026",
+    "letter": "C",
+    "description": "Algorithms, Data Structures, OS, DBMS, TOC, Computer Networks, Compilers"
+  },
+  {
+    "code": "CY",
+    "name": "Chemistry",
+    "papers": "8 PAPERS · 2019–2026",
+    "letter": "C",
+    "description": "Physical, Inorganic, Organic Chemistry & Spectroscopy"
+  },
+  {
+    "code": "DA",
+    "name": "Data Science and Artificial Intelligence",
+    "papers": "3 PAPERS · 2024–2026",
+    "letter": "D",
+    "description": "Probability & Statistics, Linear Algebra, Machine Learning, AI, Python"
+  },
+  {
+    "code": "EC",
+    "name": "Electronics and Communication Engineering",
+    "papers": "19 PAPERS · 2014–2026",
+    "letter": "E",
+    "description": "Signals & Systems, Analog/Digital Circuits, Communications, Electromagnetics"
+  },
+  {
+    "code": "EE",
+    "name": "Electrical Engineering",
+    "papers": "17 PAPERS · 2014–2026",
+    "letter": "E",
+    "description": "Electrical Machines, Power Systems, Control Systems, Power Electronics"
+  },
+  {
+    "code": "ES",
+    "name": "Environmental Science and Engineering",
+    "papers": "6 PAPERS · 2021–2026",
+    "letter": "E",
+    "description": "Environmental Chemistry, Microbiology, Water Supply, Air & Noise Pollution"
+  },
+  {
+    "code": "IN",
+    "name": "Instrumentation Engineering",
+    "papers": "7 PAPERS · 2020–2026",
+    "letter": "I",
+    "description": "Electrical Circuits, Sensors & Industrial Instrumentation, Optical Devices"
+  },
+  {
+    "code": "MA",
+    "name": "Mathematics",
+    "papers": "7 PAPERS · 2020–2026",
+    "letter": "M",
+    "description": "Linear Algebra, Real & Complex Analysis, ODE/PDE, Topology, Numerical Analysis"
+  },
+  {
+    "code": "ME",
+    "name": "Mechanical Engineering",
+    "papers": "19 PAPERS · 2016–2026",
+    "letter": "M",
+    "description": "Applied Mechanics, Design, Fluid Mechanics, Thermal Sciences, Manufacturing"
+  },
+  {
+    "code": "MN",
+    "name": "Mining Engineering",
+    "papers": "6 PAPERS · 2021–2026",
+    "letter": "M",
+    "description": "Mine Development, Geomechanics, Mine Ventilation, Underground Hazards"
+  },
+  {
+    "code": "MT",
+    "name": "Metallurgical Engineering",
+    "papers": "8 PAPERS · 2019–2026",
+    "letter": "M",
+    "description": "Thermodynamics & Kinetics, Extractive Metallurgy, Physical Metallurgy"
+  },
+  {
+    "code": "PH",
+    "name": "Physics",
+    "papers": "7 PAPERS · 2020–2026",
+    "letter": "P",
+    "description": "Mathematical Physics, Quantum Mechanics, Solid State Physics, Electrodynamics"
+  },
+  {
+    "code": "PI",
+    "name": "Production and Industrial Engineering",
+    "papers": "7 PAPERS · 2020–2026",
+    "letter": "P",
+    "description": "Metal Casting & Forming, Machining, Industrial Management, Operations Research"
+  },
+  {
+    "code": "ST",
+    "name": "Statistics",
+    "papers": "7 PAPERS · 2020–2026",
+    "letter": "S",
+    "description": "Probability, Stochastic Processes, Inference, Multivariate Analysis, Regression"
+  },
+  {
+    "code": "XH",
+    "name": "Humanities and Social Sciences",
+    "papers": "6 PAPERS · 2021–2026",
+    "letter": "X",
+    "description": "Economics, English, Linguistics, Philosophy, Psychology, Sociology"
+  }
+]

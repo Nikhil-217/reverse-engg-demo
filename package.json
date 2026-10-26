@@ -1,0 +1,13 @@
+{
+  "name": "the-gate-grind-prototype",
+  "version": "1.0.0",
+  "description": "Functional frontend prototype of The GATE Grind reverse-engineered in Antigravity",
+  "main": "index.html",
+  "scripts": {
+    "start": "python server.py",
+    "serve": "npx -y serve ."
+  },
+  "keywords": ["gate", "pyq", "reverse-engineering", "antigravity"],
+  "author": "Antigravity REA Agent",
+  "license": "MIT"
+}

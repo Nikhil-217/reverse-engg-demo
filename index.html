@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The GATE Grind – Free GATE PYQs, Mock Tests, Aptitude and Study Plan</title>
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Immediate theme restoration to prevent flash of wrong theme
+    try {
+      if (localStorage.getItem('pyq-gate-theme') === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    } catch (e) {}
+  </script>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="header-bar">
+    <div class="brand-logo" id="brandLogo" title="The GATE Grind">
+      THE GATE GRIND<span class="brand-cursor">_</span>
+    </div>
+
+    <ul class="nav-links">
+      <li class="nav-pill active" data-view="home">Home</li>
+      <li class="nav-pill" data-view="pyq">PYQs</li>
+      <li class="nav-pill" data-view="syllabus">Syllabus</li>
+      <li class="nav-pill" data-view="tests">Tests</li>
+      <li class="nav-pill" data-view="aptitude">Aptitude</li>
+      <li class="nav-pill" data-view="plan">Plan</li>
+      <li class="nav-pill" data-view="lists">Lists</li>
+    </ul>
+
+    <div class="header-actions">
+      <div class="theme-switch-wrapper" id="themeToggleBtn" title="Toggle Light / Dark mode">
+        <span style="font-size:0.7rem; color:var(--text-muted)">LIGHT</span>
+        <div class="toggle-track">
+          <div class="toggle-thumb"></div>
+        </div>
+        <span style="font-size:0.7rem; color:var(--text-muted)">DARK</span>
+      </div>
+
+      <button class="btn-sign-in" id="openSignInBtn">SIGN IN</button>
+    </div>
+  </header>
+
+  <!-- Main View Container -->
+  <main id="mainApp">
+
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="heroSection">
+      <!-- Floated Folder Tabs -->
+      <div class="hero-folders-container">
+        <div class="tilted-folder folder-pyqs">PYQs</div>
+        <div class="tilted-folder folder-mocks">Mock Tests</div>
+        <div class="tilted-folder folder-checkpoints">Checkpoints</div>
+      </div>
+
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Everything you need for<br>
+          <span class="hero-branch-highlight" id="heroBranchName" title="Click to cycle branch">Computer Science</span>, 
+          <span class="pixel-text">ORGANIZED.</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          PYQs, syllabus, checkpoints, test series for all branches, aptitude and a study plan, all in one place. Free, no sign-up.
+        </p>
+
+        <div class="hero-actions">
+          <button class="btn-primary-hero" id="heroStartBtn">
+            START PRACTISING &rarr;
+          </button>
+          <button class="btn-secondary-hero" id="heroWatchDemoBtn">
+            &#9654; WATCH THE DEMO <span style="font-size:0.72rem; opacity:0.8;">85 SEC</span>
+          </button>
+        </div>
+
+        <div class="hero-stats">
+          15,130 QUESTIONS &middot; 230 PAPERS &middot; 2010&ndash;2026
+        </div>
+
+        <div class="branch-ticker" id="branchTicker">
+          <!-- Dynamically populated branch codes -->
+        </div>
+
+        <div>
+          <a class="hero-scroll-cue" id="heroScrollCue">OR TRY A REAL QUESTION &darr;</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5-STEP MANIFESTO & GRAPH PAPER NOTEBOOK SECTION -->
+    <section class="manifesto-section" id="manifestoSection">
+      <div class="manifesto-grid">
+        <!-- Left: Philosophy -->
+        <div>
+          <h2 class="manifesto-lead">
+            The Gate Grind is not a course, and it does not sell resources. It is where you practise.
+          </h2>
+
+          <div class="manifesto-steps">
+            <div class="manifesto-step">
+              <span class="step-num">1</span>
+              <div class="step-content">
+                <strong>Find what matters.</strong> Check which topics carry the most marks in the syllabus.
+              </div>
+            </div>
+            <div class="manifesto-step">
+              <span class="step-num">2</span>
+              <div class="step-content">
+                <strong>Learn it from your own resource.</strong> Your book, notes or lectures. We don't and cannot replace them, but our progress bar shows how well it has stuck with you.
+              </div>
+            </div>
+            <div class="manifesto-step">
+              <span class="step-num">3</span>
+              <div class="step-content">
+                <strong>Clear the checkpoint.</strong> A short ladder of questions from warm-up to stretch. See what you missed, with last-minute notes to fix it.
+              </div>
+            </div>
+            <div class="manifesto-step">
+              <span class="step-num">4</span>
+              <div class="step-content">
+                <strong>Practise the PYQs.</strong> Work through the previous-year questions on that topic, with answers and explanations.
+              </div>
+            </div>
+            <div class="manifesto-step">
+              <span class="step-num">5</span>
+              <div class="step-content">
+                <strong>Your own weak points.</strong> Your answers show where you slip, with a test on each one.
+              </div>
+            </div>
+          </div>
+
+          <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:24px;">
+            When you are ready, sit a full timed mock, graded like GATE.
+          </p>
+
+          <div class="manifesto-actions">
+            <button class="btn-manifesto-primary" id="manifestoStartBtn">START PRACTISING &rarr;</button>
+            <button class="btn-manifesto-secondary" id="manifestoSyllabusBtn">SEE THE SYLLABUS</button>
+          </div>
+        </div>
+
+        <!-- Right: Neo-Brutalist Graph Paper Sticky Notes -->
+        <div class="graph-paper-card">
+          <div class="sticky-notes-stack">
+            <div class="sticky-note note-purple" data-target="pyq">
+              <div class="note-header">
+                <span class="note-badge">01</span>
+                <div class="note-title-wrap">
+                  <span class="note-title">Previous-year questions</span>
+                  <span class="note-desc">every paper, by topic</span>
+                </div>
+              </div>
+              <span class="note-arrow">&rarr;</span>
+            </div>
+
+            <div class="sticky-note note-blue" data-target="checkpoints">
+              <div class="note-header">
+                <span class="note-badge">02</span>
+                <div class="note-title-wrap">
+                  <span class="note-title">Checkpoints</span>
+                  <span class="note-desc">find and fix your mistakes</span>
+                </div>
+              </div>
+              <span class="note-arrow">&rarr;</span>
+            </div>
+
+            <div class="sticky-note note-green" data-target="tests">
+              <div class="note-header">
+                <span class="note-badge">03</span>
+                <div class="note-title-wrap">
+                  <span class="note-title">Test centre</span>
+                  <span class="note-desc">timed, graded like GATE</span>
+                </div>
+              </div>
+              <span class="note-arrow">&rarr;</span>
+            </div>
+
+            <div class="sticky-note note-pink" data-target="aptitude">
+              <div class="note-header">
+                <span class="note-badge">04</span>
+                <div class="note-title-wrap">
+                  <span class="note-title">Aptitude</span>
+                  <span class="note-desc">the 15 easy marks</span>
+                </div>
+              </div>
+              <span class="note-arrow">&rarr;</span>
+            </div>
+
+            <div class="sticky-note note-yellow" data-target="weakpoints">
+              <div class="note-header">
+                <span class="note-badge">05</span>
+                <div class="note-title-wrap">
+                  <span class="note-title">Weak points</span>
+                  <span class="note-desc">a test on each one</span>
+                </div>
+              </div>
+              <span class="note-arrow">&rarr;</span>
+            </div>
+
+            <div class="sticky-note note-orange" data-target="plan">
+              <div class="note-header">
+                <span class="note-badge">06</span>
+                <div class="note-title-wrap">
+                  <span class="note-title">Your plan</span>
+                  <span class="note-desc">weekly, monthly, final</span>
+                </div>
+              </div>
+              <span class="note-arrow">&rarr;</span>
+            </div>
+          </div>
+
+          <div class="graph-paper-footer">
+            TAP A NOTE TO JUMP IN
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: PREVIOUS YEARS CATALOG (/pyq) -->
+    <section class="catalog-section" id="catalogSection">
+      <div class="catalog-header-wrap">
+        <div>
+          <h2 class="section-headline">PREVIOUS YEARS</h2>
+          <div class="filter-tabs">
+            <button class="tab-btn active" id="tabByPaper">BY PAPER</button>
+            <button class="tab-btn" id="tabBySubject">BY SUBJECT</button>
+          </div>
+        </div>
+
+        <!-- Sticky Note Callout -->
+        <div class="callout-sticky">
+          <span class="callout-badge">NEW</span>
+          <div class="callout-title">Done with the PYQs?</div>
+          <p class="callout-body">
+            Take a timed subject test with a worked solution for every question. 195 of them, across 8 branches.
+          </p>
+          <button class="btn-callout" id="calloutTryBtn">TRY ONE &rarr;</button>
+        </div>
+      </div>
+
+      <!-- Live Search & Filtering -->
+      <div class="search-container">
+        <label class="search-label" for="branchSearchInput">Search all questions or branch papers</label>
+        <div class="search-box-row">
+          <input type="text" id="branchSearchInput" class="search-input" placeholder="e.g. Computer Science, CS, Algorithms, probability">
+          <button class="btn-search" id="branchSearchBtn">SEARCH</button>
+        </div>
+        <p class="search-hint">Which paper are you preparing for? Filter below to jump directly to its question papers.</p>
+      </div>
+
+      <!-- Alphabetical Filter Bar -->
+      <div class="alphabet-bar" id="alphabetBar">
+        <span class="alpha-chip active" data-letter="ALL">ALL</span>
+        <span class="alpha-chip" data-letter="A">A</span>
+        <span class="alpha-chip" data-letter="B">B</span>
+        <span class="alpha-chip" data-letter="C">C</span>
+        <span class="alpha-chip" data-letter="D">D</span>
+        <span class="alpha-chip" data-letter="E">E</span>
+        <span class="alpha-chip" data-letter="I">I</span>
+        <span class="alpha-chip" data-letter="M">M</span>
+        <span class="alpha-chip" data-letter="P">P</span>
+        <span class="alpha-chip" data-letter="S">S</span>
+        <span class="alpha-chip" data-letter="X">X</span>
+      </div>
+
+      <!-- 2-Column Branch Grid -->
+      <div class="branch-grid" id="branchCardsGrid">
+        <!-- Rendered by app.js -->
+      </div>
+
+      <!-- Account Remember Banner -->
+      <div class="remember-banner">
+        <div class="remember-text">
+          <strong>Want it remembered?</strong> An account keeps your branch, scores and answers on every device.
+        </div>
+        <div class="remember-actions">
+          <span class="remember-link" id="bannerSignIn">SIGN IN</span>
+          <span class="remember-link" id="bannerCreateAccount">CREATE ACCOUNT</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: QUESTION SOLVER & PRACTICE ENGINE -->
+    <section class="solver-section" id="solverSection">
+      <div class="breadcrumbs" id="solverBreadcrumbs">
+        <a id="crumbHome">Home</a> &rsaquo; 
+        <a id="crumbPYQ">Previous year questions</a> &rsaquo; 
+        <span id="crumbPaper">GATE 2024 CS (CS1)</span> &rsaquo; 
+        <span id="crumbQNum">Question 1</span>
+      </div>
+
+      <div class="question-container">
+        <h2 class="question-title" id="qTitle">GATE 2024 CS (CS1) – Question 1</h2>
+        
+        <div class="question-meta-tags">
+          <span id="qSubject">General Aptitude</span> &bull; 
+          <span id="qTopic">Analytical Aptitude: Logical Reasoning, Deduction and Analogy</span> &bull; 
+          <span id="qMarks">1 mark</span> &bull; 
+          <span id="qType">Multiple choice</span>
+        </div>
+
+        <p class="question-text" id="qStem">
+          <!-- Populated by app.js -->
+        </p>
+
+        <!-- Options Container -->
+        <div class="options-group" id="optionsGroup">
+          <!-- Populated by app.js -->
+        </div>
+
+        <button class="solver-primary-cta" id="btnPractiseGate">
+          Practise this question in The GATE Grind &rarr;
+        </button>
+
+        <!-- Accordion: Worked Answer and Explanation -->
+        <div class="explanation-accordion">
+          <div class="accordion-header" id="accordionToggleBtn">
+            <span id="accordionArrow">&#9658;</span> Show answer and explanation
+          </div>
+          <div class="accordion-body" id="accordionBody">
+            <div class="correct-key-tag" id="correctKeyTag">Correct answer: (A) starve</div>
+            <div class="explanation-text" id="explanationText"></div>
+          </div>
+        </div>
+
+        <!-- Question Navigator Row -->
+        <div class="question-nav-row">
+          <button class="btn-nav-question" id="btnPrevQ">&larr; Previous Question</button>
+          <span style="font-size:0.8rem; color:var(--text-muted);" id="qCounter">1 of 3</span>
+          <button class="btn-nav-question" id="btnNextQ">Next Question &rarr;</button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Interactive Retro Mascot: Gritty, the Crab Guide -->
+  <div class="gritty-widget" id="grittyWidget">
+    <div class="gritty-bubble" id="grittyBubble">
+      <div class="gritty-bubble-title" id="grittyTitle">Hi! I'm Gritty.</div>
+      <p id="grittyMessage">
+        Let me show you around The Gate Grind in under a minute!
+      </p>
+      <div class="gritty-bubble-controls">
+        <span id="grittyStep">1/4</span>
+        <button class="btn-gritty-action" id="grittyHideBtn">Hide Gritty</button>
+        <button class="btn-gritty-action" id="grittySkipBtn">Skip</button>
+        <button class="btn-gritty-action btn-gritty-next" id="grittyNextBtn">Next</button>
+      </div>
+    </div>
+
+    <!-- 8-Bit Retro Space Crab / Invader SVG Mascot -->
+    <div class="gritty-avatar-box" id="grittyAvatar" title="Gritty, the Crab Guide">
+      <svg width="44" height="44" viewBox="0 0 24 24" fill="#ef4444" xmlns="http://www.w3.org/2000/svg">
+        <!-- Retro pixel crab silhouette -->
+        <rect x="2" y="4" width="2" height="4" />
+        <rect x="20" y="4" width="2" height="4" />
+        <rect x="4" y="6" width="2" height="6" />
+        <rect x="18" y="6" width="2" height="6" />
+        <rect x="6" y="8" width="12" height="8" />
+        <rect x="8" y="10" width="2" height="2" fill="#ffffff" />
+        <rect x="14" y="10" width="2" height="2" fill="#ffffff" />
+        <rect x="4" y="14" width="4" height="2" />
+        <rect x="16" y="14" width="4" height="2" />
+        <rect x="6" y="16" width="2" height="4" />
+        <rect x="16" y="16" width="2" height="4" />
+        <rect x="2" y="18" width="2" height="4" />
+        <rect x="20" y="18" width="2" height="4" />
+      </svg>
+    </div>
+  </div>
+
+  <!-- Interactive Modal for Demo / Sign-In -->
+  <div class="modal-overlay" id="appModalOverlay">
+    <div class="modal-window">
+      <div class="modal-header">
+        <h3 class="modal-title" id="modalTitle">Notice</h3>
+        <button class="btn-close-modal" id="modalCloseBtn">&times;</button>
+      </div>
+      <div id="modalContent" style="font-size:0.85rem; line-height:1.6; color:var(--text-muted);">
+        <!-- Injected dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand-title">THE GATE GRIND</div>
+        <p class="footer-brand-desc">
+          Previous year question papers, organized and always free. Built for serious aspirants.
+        </p>
+        <div style="font-size:0.8rem; color:#cbd5e1;">
+          &#128247; @thegategrind
+        </div>
+      </div>
+
+      <div>
+        <div class="footer-col-title">PRODUCT</div>
+        <ul class="footer-links">
+          <li><a href="#catalogSection">Papers</a></li>
+          <li><a href="#catalogSection">Subjects</a></li>
+          <li><a href="#manifestoSection">Checkpoints</a></li>
+          <li><a href="#manifestoSection">Mocks</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">COMPANY</div>
+        <ul class="footer-links">
+          <li><a href="#manifestoSection">About</a></li>
+          <li><a href="#">Contact on Instagram</a></li>
+          <li><a href="#">Contribute Questions</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <div class="footer-col-title">LEGAL</div>
+        <ul class="footer-links">
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 THE GATE GRIND. ALL RIGHTS RESERVED.</div>
+      <div style="cursor:pointer;" id="footerToggleGritty">HIDE GRITTY, THE CRAB GUIDE</div>
+      <div style="font-weight:700; letter-spacing:1px;">MADE IN INDIA</div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

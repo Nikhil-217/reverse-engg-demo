@@ -1,0 +1,65 @@
+[
+  {
+    "id": "gate-2024-cs-q1",
+    "paper": "GATE 2024 CS (CS1)",
+    "branch": "CS-IT",
+    "year": "2024",
+    "qNum": 1,
+    "title": "GATE 2024 CS (CS1) – Question 1",
+    "subject": "General Aptitude",
+    "topic": "Analytical Aptitude: Logical Reasoning, Deduction and Analogy",
+    "marks": "1 mark",
+    "type": "Multiple choice",
+    "text": "If '→' denotes increasing order of intensity, then the meaning of the words [dry → arid → parched] is analogous to [diet → fast → _________]. Which one of the given options is appropriate to fill the blank?",
+    "options": [
+      { "id": "A", "label": "A. starve" },
+      { "id": "B", "label": "B. reject" },
+      { "id": "C", "label": "C. feast" },
+      { "id": "D", "label": "D. deny" }
+    ],
+    "correct": "A",
+    "explanation": "The first sequence increases the severity of dryness: normal lack of water (\"dry\"), extreme dryness (\"arid\"), to severe desiccation (\"parched\").\n\nThe corresponding food sequence should progress from restricting food (\"diet\"), to completely abstaining from eating for a period (\"fast\"), to severe deprivation and life-threatening hunger (\"starve\").\n\nThus (A) starve is the correct answer. \"Feast\" is an antonym, while \"reject\" and \"deny\" do not describe escalating physiological hunger."
+  },
+  {
+    "id": "gate-2024-cs-q2",
+    "paper": "GATE 2024 CS (CS1)",
+    "branch": "CS-IT",
+    "year": "2024",
+    "qNum": 2,
+    "title": "GATE 2024 CS (CS1) – Question 2",
+    "subject": "Data Structures & Algorithms",
+    "topic": "Binary Search Trees & Traversals",
+    "marks": "2 marks",
+    "type": "Multiple choice",
+    "text": "Consider a Binary Search Tree (BST) constructed by inserting the following distinct integers one by one into an initially empty BST: 45, 23, 78, 12, 34, 67, 89, 56. Which of the following is the post-order traversal sequence of the resulting tree?",
+    "options": [
+      { "id": "A", "label": "A. 12, 34, 23, 56, 67, 89, 78, 45" },
+      { "id": "B", "label": "B. 12, 23, 34, 45, 56, 67, 78, 89" },
+      { "id": "C", "label": "C. 45, 23, 12, 34, 78, 67, 56, 89" },
+      { "id": "D", "label": "D. 34, 12, 23, 56, 89, 67, 78, 45" }
+    ],
+    "correct": "A",
+    "explanation": "Construct the BST step-by-step:\n- Root = 45\n- 23 < 45 (left child of 45)\n- 78 > 45 (right child of 45)\n- 12 < 23 (left child of 23)\n- 34 > 23 (right child of 23)\n- 67 < 78 (left child of 78)\n- 89 > 78 (right child of 78)\n- 56 < 67 (left child of 67)\n\nPost-order traversal visits Left, Right, then Root:\n- Left subtree of 23: 12\n- Right subtree of 23: 34\n- Node 23\n=> (12, 34, 23)\n- Right subtree of 45: Left subtree of 78 has (56, 67), right has 89, node 78\n=> (56, 67, 89, 78)\n- Finally root: 45\nResulting sequence: 12, 34, 23, 56, 67, 89, 78, 45."
+  },
+  {
+    "id": "gate-2023-cs-q3",
+    "paper": "GATE 2023 CS",
+    "branch": "CS-IT",
+    "year": "2023",
+    "qNum": 3,
+    "title": "GATE 2023 CS – Question 3",
+    "subject": "Operating Systems",
+    "topic": "Process Synchronization & Semaphores",
+    "marks": "1 mark",
+    "type": "Multiple choice",
+    "text": "A counting semaphore S is initialized to 10. Then, 12 P (wait) operations and 7 V (signal) operations are completed on S in an arbitrary order. What is the current value of the semaphore S?",
+    "options": [
+      { "id": "A", "label": "A. 5" },
+      { "id": "B", "label": "B. 3" },
+      { "id": "C", "label": "C. 2" },
+      { "id": "D", "label": "D. 0" }
+    ],
+    "correct": "A",
+    "explanation": "Initial value of semaphore S = 10.\nEach P operation decrements the semaphore value by 1.\nEach V operation increments the semaphore value by 1.\n\nCurrent value = Initial + (# of V operations) - (# of P operations)\nCurrent value = 10 + 7 - 12 = 17 - 12 = 5.\n\nHence, option (A) is correct."
+  }
+]
